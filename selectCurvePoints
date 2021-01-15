@@ -1,0 +1,7 @@
+import maya.cmds as mc
+ 
+mc.select("hairs")
+allCurves = mc.ls(sl=1, o=1)
+#print allCurves
+for eachCurve in allCurves:
+    mc.select(eachCurve+".cv[7:9]", add=1)
